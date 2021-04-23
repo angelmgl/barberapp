@@ -1,23 +1,24 @@
 /** Media Queries **/
-@mixin telefono {
-    @media (min-width: #{$telefono}) {
+@mixin mobile {
+    @media (min-width: 480px) {
         @content;
     }
 }
 
 @mixin tablet {
-    @media (min-width: #{$tablet}) {
+    @media (min-width: 768px) {
         @content;
     }
 }
-  
+
 @mixin desktop {
-    @media (min-width: #{$desktop}) {
+    @media (min-width: 1144px) {
         @content;
     }
 }
-@mixin grid($columnas, $espaciado ) {
+
+@mixin grid($cols, $gap) {
     display: grid;
-    gap: $espaciado;
-    grid-template-columns: repeat($columnas, 1fr);
+    grid-template-columns: repeat($cols, 1fr);
+    gap: $gap;
 }

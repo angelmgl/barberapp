@@ -1,22 +1,17 @@
-// Fuentes
-$fuente_principal: 'Poppins', sans-serif;
+// fonts
+$mainFont: 'Poppins', sans-serif;
 
-// Tamaño de Media Queries
-$telefono: 480px;
-$tablet: 768px;
-$desktop: 1024px;
+// colors
+$blue: #0da6f3;
+$dark: #1a1b15;
+$white: #FFFFFF;
+$gray: #e1e1e1;
 
-// Colores
-$azul: #0da6f3;
-$negro: #1a1b15;
-$blanco: #FFFFFF;
-$gris: #e1e1e1;
+$gap: 5rem;
 
-$separacion: 5rem;
+// sizes
 
-// Fuentes
-
-$delgada: 300;
+$tiny: 300;
 $regular : 400;
 $bold: 700;
 $black: 900
