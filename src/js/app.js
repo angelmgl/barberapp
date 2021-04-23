@@ -1,11 +1,17 @@
 let page = 1;
 
 document.addEventListener('DOMContentLoaded', () => {
-    initApp();
+    initApp(); // generate service cards in services section
+    
+    showSection(); // show initial section
+    
+    changeSection(); // change between tabs and sections
+    
+    // navigate between prev and next
+    nextPage(); 
+    prevPage();
 
-    showSection();
-
-    changeSection();
+    pagination() // check the current page to display buttons
 })
 
 function initApp() {
@@ -13,11 +19,19 @@ function initApp() {
 }
 
 function showSection() {
+    // hide other sections
+    const $prevSection = document.querySelector(".visible");
+    if($prevSection) $prevSection.classList.remove("visible");
+
     const currentSection = document.getElementById(`step-${page}`);
     currentSection.classList.add("visible");
 
     // highlight current tab
     const tab = document.querySelector(`[data-step="${page}"]`);
+
+    // delete current class on the previous tab
+    const prevTab = document.querySelector(".current");
+    if(prevTab) prevTab.classList.remove("current");
     tab.classList.add("current");
 }
 
@@ -29,17 +43,8 @@ function changeSection() {
             e.preventDefault();
             page = parseInt(e.target.dataset.step);
 
-            // hide other sections
-            document.querySelector(".visible").classList.remove("visible");
-
-            const $section = document.getElementById(`step-${page}`);
-            $section.classList.add("visible");
-
-            // delete current class on the previous tab
-            document.querySelector(".current").classList.remove("current");
-            // add current class on the current tab
-            const currentTab = document.querySelector(`[data-step="${page}"]`);
-            currentTab.classList.add("current");
+            showSection(); 
+            pagination();
         })
     })
 }
@@ -89,4 +94,40 @@ function selectService(e) {
                 : e.target;
 
     element.classList.toggle("selected");
+}
+
+function nextPage() {
+    const $nextBtn = document.getElementById("next");
+    $nextBtn.addEventListener('click', () => {
+        page++;
+        console.log(page);
+        pagination();
+    });
+}
+
+function prevPage() {
+    const $prevBtn = document.getElementById("prev");
+    $prevBtn.addEventListener('click', () => {
+        page--;
+        console.log(page);
+        pagination();
+    });
+}
+
+function pagination() {
+    const $nextBtn = document.getElementById("next");
+    const $prevBtn = document.getElementById("prev");
+
+    if(page === 1) {
+        $prevBtn.classList.add("hide");
+        $nextBtn.classList.remove("hide");
+    } else if(page === 3) {
+        $prevBtn.classList.remove("hide");
+        $nextBtn.classList.add("hide");
+    } else {
+        $prevBtn.classList.remove("hide");
+        $nextBtn.classList.remove("hide");
+    }
+
+    showSection();
 }

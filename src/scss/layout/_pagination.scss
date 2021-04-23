@@ -1,0 +1,27 @@
+.pagination {
+    margin: $gap 0;
+    display: flex;
+    justify-content: space-between;
+
+    button {
+        padding: 0.5rem 2rem;
+        display: block;
+        color: $white;
+        background-color: $blue;
+        border: none;
+        font-size: 1.5rem;
+        font-weight: $bold;
+        text-align: center;
+        text-transform: uppercase;
+        cursor: pointer;
+
+        @include mobile {
+            padding: 1rem 3rem;
+            font-size: 2rem;
+        }
+
+        &.hide {
+            visibility: hidden;
+        }
+    }
+}
