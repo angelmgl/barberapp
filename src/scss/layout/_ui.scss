@@ -29,9 +29,9 @@ html {
     .section {
         display: none;
         margin-top: $gap / 2;
-
-        &:first-of-type {
-            display: block;
-        }
     }
+}
+
+.visible {
+    display: block!important;
 }

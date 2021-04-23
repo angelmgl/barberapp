@@ -462,8 +462,8 @@ html {
   margin-top: 2.5rem;
 }
 
-.app .section:first-of-type {
-  display: block;
+.visible {
+  display: block !important;
 }
 
 .tabs {
@@ -485,8 +485,9 @@ html {
   cursor: pointer;
 }
 
-.tabs button:hover {
-  background-color: #e6e6e6;
+.tabs button.current {
+  background-color: #0da6f3;
+  color: #FFFFFF;
 }
 
 @media (min-width: 768px) {

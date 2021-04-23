@@ -11,8 +11,9 @@
         text-transform: uppercase;
         cursor: pointer;
 
-        &:hover {
-            background-color: darken(#fff, 10);
+        &.current {
+            background-color: $blue;
+            color: $white;
         }
     }
 }
