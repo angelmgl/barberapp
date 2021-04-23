@@ -456,4 +456,83 @@ html {
   margin: 0 auto;
   padding-top: 2.5rem;
 }
+
+.app .section {
+  display: none;
+  margin-top: 2.5rem;
+}
+
+.app .section:first-of-type {
+  display: block;
+}
+
+.tabs {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 1.66667rem;
+}
+
+.tabs button {
+  padding: 1rem;
+  background-color: #FFFFFF;
+  border: none;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.tabs button:hover {
+  background-color: #e6e6e6;
+}
+
+@media (min-width: 768px) {
+  .services {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    gap: 1.66667rem;
+  }
+}
+
+.services .service {
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  background-color: #FFFFFF;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .services .service {
+    margin-bottom: 0;
+  }
+}
+
+.services .service p {
+  margin: 0 0 1.25rem;
+}
+
+.services .service .service-name {
+  color: #1a1b15;
+}
+
+.services .service .service-price {
+  margin: 0;
+  color: #0da6f3;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.services .service.selected {
+  background-color: #0da6f3;
+}
+
+.services .service.selected p {
+  color: #FFFFFF;
+}
 /*# sourceMappingURL=app.css.map */

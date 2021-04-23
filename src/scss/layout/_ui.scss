@@ -25,4 +25,13 @@ html {
     width: 95%;
     margin: 0 auto;
     padding-top: $gap / 2;
+
+    .section {
+        display: none;
+        margin-top: $gap / 2;
+
+        &:first-of-type {
+            display: block;
+        }
+    }
 }
