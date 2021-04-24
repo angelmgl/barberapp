@@ -29,7 +29,9 @@
                 <div id="step-1" class="section">
                     <h2>Servicios</h2>
 
-                    <p class="text-center">Elige tus servicios a continuación</p>
+                    <p class="text-center">
+                        Elige tus servicios a continuación
+                    </p>
 
                     <div class="services" id="services">
                         <!-- content generated dinamically with javascript-->
@@ -38,8 +40,35 @@
 
                 <div id="step-2" class="section">
                     <h2>Tus datos y cita</h2>
+                    <p class="text-center">
+                        Coloca tus datos y elige la fecha de tu cita
+                    </p>
+
+                    <form action="" class="form">
+                        <div class="input-group">
+                            <label for="name">Nombre</label>
+                            <input
+                                type="text"
+                                id="name"
+                                placeholder="Tu nombre..."
+                                required
+                            />
+                        </div>
+                        <div class="input-group">
+                            <label for="date">Fecha</label>
+                            <input type="date" id="date" required />
+                        </div>
+                        <div class="input-group">
+                            <label for="time">Hora</label>
+                            <input type="time" id="time" required />
+                        </div>
+                        <div class="input-group">
+                            <label for="tel">Teléfono</label>
+                            <input type="tel" id="tel" placeholder="0981123456" required />
+                        </div>
+                    </form>
                 </div>
-                
+
                 <div id="step-3" class="section">
                     <h2>Resumen</h2>
                 </div>

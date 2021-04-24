@@ -1,5 +1,12 @@
 let page = 1;
 
+const cita = {
+    name: "",
+    date: "",
+    time: "",
+    services: []
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     initApp(); // generate service cards in services section
     
@@ -11,7 +18,10 @@ document.addEventListener('DOMContentLoaded', () => {
     nextPage(); 
     prevPage();
 
-    pagination() // check the current page to display buttons
+    pagination(); // check the current page to display buttons
+
+    // show the session's resumen
+    showResumen();
 })
 
 function initApp() {
@@ -130,4 +140,19 @@ function pagination() {
     }
 
     showSection();
+}
+
+function showResumen() {
+    // destructuring
+    const { name, date, time, services } = cita;
+    const $resumen = document.getElementById("step-3");
+    // validate
+    if(Object.values(cita).includes("")) {
+        const $noServices = document.createElement("P");
+        $noServices.textContent = "Faltan datos de servicios, hora, fecha o su nombre";
+        $noServices.classList.add("invalid");
+
+        //add to the DOM
+        $resumen.appendChild($noServices);
+    }
 }
