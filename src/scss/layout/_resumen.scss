@@ -2,3 +2,35 @@
     margin: $gap / 2;
     text-align: center;
 }
+
+.resumen {
+    p {
+        span {
+            color: $blue;
+            font-size: 2.4rem;
+        }
+    }
+
+    .resumen-services {
+        h3 {
+            margin: $gap / 2 0;
+        } 
+
+        .service-container {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #434345;
+
+            .service-price {
+                color: $blue;
+                font-size: 2.4rem;
+                font-weight: $bold;
+            }
+        }
+    }
+}
+
+.total {
+    text-align: right;
+    font-size: 2.6rem;
+}

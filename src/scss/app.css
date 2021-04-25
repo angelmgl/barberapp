@@ -345,6 +345,10 @@ template {
   text-align: center;
 }
 
+.bold {
+  font-weight: 700;
+}
+
 /** Media Queries **/
 html {
   font-size: 62.5%;
@@ -432,7 +436,6 @@ html {
   .contenedor-estetica {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
     gap: 2.5rem;
   }
@@ -469,7 +472,6 @@ html {
 .tabs {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
   gap: 1.66667rem;
 }
@@ -494,7 +496,6 @@ html {
   .services {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
     gap: 1.66667rem;
   }
@@ -560,7 +561,7 @@ html {
   cursor: pointer;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 370px) {
   .pagination button {
     padding: 1rem 3rem;
     font-size: 2rem;
@@ -620,8 +621,46 @@ html {
   }
 }
 
+.alert {
+  display: block;
+  padding: 1.25rem;
+  color: #FFFFFF;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.alert.error {
+  background-color: #c20000;
+}
+
 .invalid {
   margin: 2.5rem;
   text-align: center;
+}
+
+.resumen p span {
+  color: #0da6f3;
+  font-size: 2.4rem;
+}
+
+.resumen .resumen-services h3 {
+  margin: 2.5rem 0;
+}
+
+.resumen .resumen-services .service-container {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #434345;
+}
+
+.resumen .resumen-services .service-container .service-price {
+  color: #0da6f3;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.total {
+  text-align: right;
+  font-size: 2.6rem;
 }
 /*# sourceMappingURL=app.css.map */

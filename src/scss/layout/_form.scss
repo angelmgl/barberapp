@@ -32,3 +32,15 @@
         }
     }
 }
+
+.alert {
+    display: block;
+    padding: $gap / 4;
+    color: $white;
+    border-radius: 1rem;
+    text-align: center;
+
+    &.error {
+        background-color: rgb(194,0,0);
+    }
+}
